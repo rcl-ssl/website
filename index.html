@@ -16,24 +16,25 @@
 
   <!-- Event snippet for Sign-up conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion', {
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
         'send_to': 'AW-1037407170/1dw3CKjF1qwBEMKn1u4D',
         'event_callback': callback
-    });
-    return false;
-  }
+      });
+      return false;
+    }
   </script>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="RCL is an online client for Let's Encrypt used to create free SSL/TLS certificates for web apps in Microsoft Azure. 
+  <meta name="description"
+    content="RCL is an online client for Let's Encrypt used to create free SSL/TLS certificates for web apps in Microsoft Azure. 
     Supports wild card domains, SAN multi domain, naked apex domains, subdomains, www subdomains. 
     Install SSL/TLS certificates in Apache, Tomcat, NGINX, IIS, Node.js, Plesk, cPanel, etc. in a Virtual Machine.
     Use RCL CertificateBot to automatically install and renew certificate in Windows and Linux servers.
@@ -116,7 +117,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
               Create and install free SSL/TLS certificates for your web apps.
             </h2>
             <a href="#try" class="btn btn-outline btn-xl js-scroll-trigger">Get Started Now!</a>
-            <div class="mt-4"><small> Let's Encrypt is a trademark of the <u><a class="text-light" href="https://www.abetterinternet.org/" target="_blank">Internet Security Research Group</a></u>. All rights reserved.</small></div>
+            <div class="mt-4"><small> Let's Encrypt is a trademark of the <u><a class="text-light"
+                    href="https://www.abetterinternet.org/" target="_blank">Internet Security Research Group</a></u>.
+                All rights reserved.</small></div>
           </div>
         </div>
         <div class="col-lg-5 my-auto">
@@ -132,26 +135,18 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
         <h2>
           <i>Let's Encrypt&trade;</i> Client
         </h2>
-        <h4>Use the RCL client for <i>Let's Encrypt&trade;</i> to create free SSL/TLS certificates in Microsoft Azure</h4>
-          <p>Supports naked domains (mysite.com), subdomains (store.mysite.com), wild card domains (*.mysite.com), www
-            subdomains (www.mysite.com) and SAN multi-domains. Install SSL/TLS certificates in Apache, Tomcat, NGINX, IIS, Node.js, Plesk, cPanel, XAMPP, etc.
-            Automatically create and install SSL/TLS certificates in Azure App Services, Azure Key Vault.</p>
-          <hr>
+        <h4>Use the RCL client for <i>Let's Encrypt&trade;</i> to create free SSL/TLS certificates in Microsoft Azure
+        </h4>
+        <p>Supports naked domains (mysite.com), subdomains (store.mysite.com), wild card domains (*.mysite.com), www
+          subdomains (www.mysite.com) and SAN multi-domains. Install SSL/TLS certificates in Apache, Tomcat, NGINX, IIS,
+          Node.js, Plesk, cPanel, XAMPP, etc.
+          Automatically create and install SSL/TLS certificates in Azure App Services, Azure Key Vault.</p>
+      </div>
+      <div class="text-center mb-5">
+        <img src="./img/rcl-portal.png" class="img-fluid">
       </div>
       <div class="row">
-        <div class="col-lg-4 my-auto">
-          <div class="device-container">
-            <div class="device-mockup iphone6_plus portrait white">
-              <div class="device">
-                <div class="screen">
-                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <img src="img/secondary_image.png" class="img-fluid" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-8 my-auto">
+        <div class="col-lg-12 my-auto">
           <div class="container-fluid">
             <div class="row">
               <div class="col-lg-6">
@@ -159,34 +154,41 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                   <i class="fas fa-globe text-primary"></i>
                   <h3>App Services and Key Vault</h3>
                   <p class="text-muted">Create certificates for <a
-                      href="https://docs.rclapp.com/portal/azure-appservice.html" target="_blank">Azure App Services</a> (Web Apps, Functions, Mobile Apps) and <a href="https://docs.rclapp.com/portal/azure-keyvault.html" target="_blank">Azure Key Vault<a></p>
+                      href="https://docs.rclapp.com/portal/azure-appservice.html" target="_blank">Azure App Services</a>
+                    (Web Apps, Functions, Mobile Apps) and <a href="https://docs.rclapp.com/portal/azure-keyvault.html"
+                      target="_blank">Azure Key Vault<a></p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="feature-item">
                   <i class="fas fa-server text-primary"></i>
                   <h3>Virtual Machines</h3>
-                  <p class="text-muted">Install SSL/TLS in Apache, Tomcat, NGINX, IIS, Plesk, cPanel, Node.js, etc. in your <a target="_blank" href="https://docs.rclapp.com/portal/stand-alone.html#certificate-installation">Virtual Machines</a></p>
+                  <p class="text-muted">Install SSL/TLS in Apache, Tomcat, NGINX, IIS, Plesk, cPanel, Node.js, etc. in
+                    your <a target="_blank"
+                      href="https://docs.rclapp.com/portal/stand-alone.html#certificate-installation">Virtual
+                      Machines</a></p>
                 </div>
               </div>
-              </div>
+            </div>
             <div class="row">
               <div class="col-lg-6">
                 <div class="feature-item">
                   <i class="fas fa-robot text-primary"></i>
                   <h3>Automatic Renewals</h3>
-                  <p class="text-muted">Use the <a target="_blank" href="https://docs.rclapp.com/autorenew/autorenew.html">AutoRenew Function</a> and
-                      <a href="https://docs.rclapp.com/certbot/certbot.html" target="_blank">
-                      CertificateBot</a> to automatically renew SSL/TLS certificates before they expire</p>
+                  <p class="text-muted">Use the <a target="_blank"
+                      href="https://docs.rclapp.com/autorenew/autorenew.html">AutoRenew Function</a> and
+                    <a href="https://docs.rclapp.com/certbot/certbot.html" target="_blank">
+                      CertificateBot</a> to automatically renew SSL/TLS certificates before they expire
+                  </p>
                 </div>
               </div>
               <div class="col-lg-6">
                 <div class="feature-item">
                   <i class="fas fa-code text-primary"></i>
                   <h3>API and SDK</h3>
-                  <p class="text-muted">Use our <a href="https://docs.rclapp.com/api/api.html"
-                      target="_blank">API</a> and <a href="https://docs.rclapp.com/sdk/sdk.html"
-                      target="_blank">SDK</a> to build your own system for certificate renewal and
+                  <p class="text-muted">Use our <a href="https://docs.rclapp.com/api/api.html" target="_blank">API</a>
+                    and <a href="https://docs.rclapp.com/sdk/sdk.html" target="_blank">SDK</a> to build your own system
+                    for certificate renewal and
                     installation in your web server</p>
                 </div>
               </div>
@@ -202,12 +204,15 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
       <div class="row">
         <div class="col-md-8 mx-auto">
           <h2 class="section-heading">
-            <a onclick="gtag_report_conversion('https://rclapp.com')" href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002" target="_blank">Try it in the Azure Marketplace</a></h2>
+            <a onclick="gtag_report_conversion('https://rclapp.com')"
+              href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002" target="_blank">Try
+              it in the Azure Marketplace</a>
+          </h2>
           <p class="text-light">Try it for free for 30 days! Pay $USD 4.99 / month afterwards.
           </p>
           <div class="badges">
-            <a onclick="gtag_report_conversion('https://rclapp.com')" class="badge-link" href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002"
-              target="_blank">
+            <a onclick="gtag_report_conversion('https://rclapp.com')" class="badge-link"
+              href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002" target="_blank">
               <img src="img/azure_marketplace.png" alt="Subscribe in Azure Marketplace">
             </a>
           </div>
