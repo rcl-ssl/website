@@ -14,21 +14,21 @@
     gtag('config', 'AW-1037407170');
   </script>
 
-<!-- Event snippet for Call To Action (CTA) conversion page
+  <!-- Event snippet for Call To Action (CTA) conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-  function gtag_report_conversion(url) {
-    var callback = function () {
-      if (typeof(url) != 'undefined') {
-        window.location = url;
-      }
-    };
-    gtag('event', 'conversion', {
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof (url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
         'send_to': 'AW-1037407170/Yo5zCPmfq8UDEMKn1u4D',
         'event_callback': callback
-    });
-    return false;
-  }
+      });
+      return false;
+    }
   </script>
 
   <meta charset="utf-8">
@@ -112,9 +112,10 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
             <h1 class="mb-5">
               RCL client for <i>Let's Encrypt&trade;</i> for Microsoft Azure
             </h1>
-            <h2>
-              Create and install free SSL/TLS certificates for your web apps.
-            </h2>
+            <h3>
+              It is the most comprehensive solution available in Microsoft Azure to create free SSL/TLS certificates for all your
+              workloads (Virtual Machines, App Services, Key Vault, Application Gateway and Azure Kubernetes Service)
+            </h3>
             <a href="#try" class="btn btn-outline btn-xl js-scroll-trigger">Get Started Now!</a>
             <div class="mt-4"><small> Let's Encrypt is a trademark of the <u><a class="text-light"
                     href="https://www.abetterinternet.org/" target="_blank">Internet Security Research Group</a></u>.
@@ -131,18 +132,28 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
   <section class="features" id="features">
     <div class="container">
       <div class="section-heading text-center">
-        <h2>
-          RCL Portal
-        </h2>
-        <h4>Use the <a href="https://docs.rclapp.com/portal/portal.html" target="_blank">RCL Portal</a> to create free SSL/TLS certificates in Microsoft Azure
-        </h4>
-        <p>Supports naked domains (mysite.com), subdomains (store.mysite.com), wild card domains (*.mysite.com), www
-          subdomains (www.mysite.com) and SAN multi-domains. Install SSL/TLS certificates in Apache, Tomcat, NGINX, IIS,
-          Node.js, Plesk, cPanel, XAMPP, etc.
-          Automatically create and install SSL/TLS certificates in Azure App Services and Azure Key Vault.</p>
-      </div>
-      <div class="text-center mb-5">
-        <img src="./img/rcl-portal.png" class="img-fluid">
+        <div>
+          <h2 class="mt-5">Install it in Microsoft Azure</h2>
+          <h4 class="mb-5">Install it directly in the Azure Portal, Azure Marketplace or App Source</h4>
+          <div class="text-center mb-5 shadow-lg rounded">
+            <img src="./img/install.jpg" class="img-fluid img-thumbnail">
+          </div>
+        </div>
+        <div class="mt-5">
+          <h2>
+            RCL Portal
+          </h2>
+          <h4>Use the <a href="https://docs.rclapp.com/portal/portal.html" target="_blank">RCL Portal</a> to create free
+            SSL/TLS certificates in Microsoft Azure
+          </h4>
+          <div class="text-center mb-5 shadow rounded">
+            <img src="./img/rcl-portal.png" class="img-fluid">
+          </div>
+          <p class="mb-5">Supports naked domains (mysite.com), subdomains (store.mysite.com), wild card domains (*.mysite.com), www
+            subdomains (www.mysite.com) and SAN multi-domains. Install SSL/TLS certificates in Apache, Tomcat, NGINX, IIS,
+            Node.js, Plesk, cPanel, XAMPP, etc.
+            Automatically create and install SSL/TLS certificates in Azure App Services and Azure Key Vault.</p>
+        </div>
       </div>
       <div class="row">
         <div class="col-lg-12 my-auto">
@@ -162,9 +173,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <div class="feature-item">
                   <i class="fas fa-server text-primary"></i>
                   <h3>Virtual Machines</h3>
-                  <p class="text-muted">Create SSL/TLS certificates for Apache, Tomcat, NGINX, IIS, Plesk, cPanel, XAMPP, Node.js, etc. in
-                    your <a target="_blank"
-                      href="https://docs.rclapp.com/portal/stand-alone.html">Virtual
+                  <p class="text-muted">Create SSL/TLS certificates for Apache, Tomcat, NGINX, IIS, Plesk, cPanel,
+                    XAMPP, Node.js, etc. in
+                    your <a target="_blank" href="https://docs.rclapp.com/portal/stand-alone.html">Virtual
                       Machines</a></p>
                 </div>
               </div>
@@ -174,8 +185,9 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                 <div class="feature-item">
                   <i class="fas fa-sitemap text-primary"></i>
                   <h3>Application Gateway and Virtual Machines</h3>
-                  <p class="text-muted">Create and automatically renew certificates in Azure Virtual Machines using <a href="https://docs.rclapp.com/workloads/vm-keyvault-gateway.html"
-                      target="_blank">Azure Application Gateway V2<a></p>
+                  <p class="text-muted">Create and automatically renew certificates in Azure Virtual Machines using <a
+                      href="https://docs.rclapp.com/workloads/vm-keyvault-gateway.html" target="_blank">Azure
+                      Application Gateway V2<a></p>
                 </div>
               </div>
               <div class="col-lg-6">
