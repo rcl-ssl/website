@@ -12,6 +12,27 @@
         gtag('config', 'AW-16551612300');
     </script>
 
+    <!-- Google tag (gtag.js) event - delayed navigation helper -->
+
+    <script>
+        // Helper function to delay opening a URL until a gtag event is sent.
+        // Call it in response to an action that should navigate to a URL.
+        function gtagSendEvent(url) {
+            var callback = function () {
+                if (typeof url === 'string') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion_event_begin_checkout', {
+                'event_callback': callback,
+                'event_timeout': 2000,
+                // <event_parameters>
+            });
+            return false;
+        }
+    </script>
+
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Use RCL SSL to create free SSL/TLS certificates for your Microsoft
@@ -58,16 +79,19 @@
         <div class="container px-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-6">
-                    <!-- Mashead text and app badges-->
+                    <!-- Masthead text and app badges-->
                     <div class="mb-5 mb-lg-0 text-center text-lg-start">
                         <h1 class="display-3 lh-1 mb-3">RCL SSL Client for Let's Encrypt</h1>
                         <p class="lead fw-normal text-muted mb-5">Create free SSL/TLS certificates for your Microsoft
                             Azure websites and cloud services using the popular Let's Encrypt API</p>
 
                         <div class="d-flex flex-column flex-lg-row align-items-center">
-                            <a class="me-lg-4 mb-4 mb-lg-0" target="_blank"
-                                href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002?tab=Overview"><img
-                                    class="app-badge" src="./assets/img/azure-maketplace.png" alt="..." /></a>
+                            <a onclick="return gtag_report_conversion('https://rclapp.com')"
+                                class="me-lg-4 mb-4 mb-lg-0" target="_blank"
+                                href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002?tab=Overview">
+                                <img class="app-badge" src="./assets/img/azure-maketplace.png"
+                                    alt="Azure Marketplace Icon" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -198,9 +222,12 @@
             <h2 class="text-center text-white font-alt">Try it for free for 30 days!</h2>
             <p class="text-center text-white mb-4">Then pay US$19.99 / month</p>
             <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                <a target="_blank"
-                    href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002?tab=Overview"><img
-                        class="app-badge" src="./assets/img/azure-maketplace.png" alt="..." /></a>
+                <a onclick="return gtag_report_conversion('https://rclapp.com')"
+                class="me-lg-4 mb-4 mb-lg-0" target="_blank"
+                href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002?tab=Overview">
+                <img class="app-badge" src="./assets/img/azure-maketplace.png"
+                    alt="Azure Marketplace Icon" />
+            </a>
             </div>
         </div>
     </section>
