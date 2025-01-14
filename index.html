@@ -3,33 +3,36 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16551612300"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1RZZ3CGTLB"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-1RZZ3CGTLB');
-        gtag('config', 'AW-16551612300');
+        gtag('config', 'AW-11417967471');
     </script>
 
     <!-- Google tag (gtag.js) event - delayed navigation helper -->
 
+    <!-- Event snippet for Begin Checkout conversion page
+    In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
-        // Helper function to delay opening a URL until a gtag event is sent.
-        // Call it in response to an action that should navigate to a URL.
-        function gtagSendEvent(url) {
+        function gtag_report_conversion(url) {
             var callback = function () {
-                if (typeof url === 'string') {
+                if (typeof (url) != 'undefined') {
                     window.location = url;
                 }
             };
-            gtag('event', 'conversion_event_begin_checkout', {
-                'event_callback': callback,
-                'event_timeout': 2000
+            gtag('event', 'conversion', {
+                'send_to': 'AW-11417967471/0TzDCLPJjocaEO-2wcQq',
+                'value': 1.0,
+                'currency': 'USD',
+                'event_callback': callback
             });
             return false;
         }
     </script>
+
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -92,7 +95,7 @@
                                 </small>
                             </p>
                             <div class="d-flex flex-column flex-lg-row align-items-center mt-3">
-                                <a onclick="return gtagSendEvent('https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002?tab=overview')"
+                                <a onclick="return gtag_report_conversion('https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002?tab=overview')"
                                     class="me-lg-4 mb-4 mb-lg-0" target="_blank"
                                     href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002?tab=overview">
                                     <img class="app-badge" src="./assets/img/azure-maketplace.png"
@@ -167,7 +170,7 @@
                                     <h3 class="font-alt">Application Gateway</h3>
                                     <p class="text-muted mb-0">SSL/TLS for <a target="_blank"
                                             href="https://docs.rclapp.com/workloads/appgateway.html">Azure Application
-                                            Gateway</a> 
+                                            Gateway</a>
                                     </p>
                                 </div>
                             </div>
@@ -322,7 +325,7 @@
             <h2 class="text-center text-white font-alt">Try it for free for 30 days!</h2>
             <p class="text-center text-white mb-4">Then pay US$19.99 / month</p>
             <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-                <a onclick="return; gtagSendEvent('https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002?tab=overview')"
+                <a onclick="return; gtag_report_conversion('https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002?tab=overview')"
                     class="me-lg-4 mb-4 mb-lg-0" target="_blank"
                     href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/rayconsulting.002?tab=overview">
                     <img class="app-badge" src="./assets/img/azure-maketplace.png" alt="Azure Marketplace Icon" />
